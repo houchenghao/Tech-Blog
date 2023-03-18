@@ -1,0 +1,16 @@
+[
+    { 
+      "name": "Chenghao",
+      "body": "The first post",
+      "createdAt": "2022-06-22 10:30:00",
+      "updatedAt": "2022-06-22 10:30:00",
+      "userid": 1
+    },
+    { 
+      "name": "opopiio",
+      "body": "The second post",
+      "createdAt": "2022-06-22 10:30:00",
+      "updatedAt": "2022-06-22 10:30:00",
+      "userid": 2
+    }
+  ]
