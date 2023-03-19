@@ -1,6 +1,5 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  console.log("pressloginbutton")
 
   // Collect values from the login form
   const name = document.querySelector("#name-login").value.trim();

@@ -1,0 +1,8 @@
+#form-display{
+    display: none;
+}
+
+.create-form-container{
+    width: 80%;
+    height: 300px;
+}
