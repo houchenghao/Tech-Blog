@@ -12,17 +12,22 @@ Post.init(
       autoIncrement: true,
     },
 
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
     body: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
-    createdAt: {
+    created_at: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: DataTypes.NOW
     },
-    updatedAt: {
+    updated_at: {
         type: DataTypes.DATE,
         allowNull: false
     },
