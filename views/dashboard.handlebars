@@ -1,5 +1,5 @@
 {{#each posts as |posts| }}
-<div class="row mb-4 project">
+<div class="row mb-4">
   <div class="col-md-5">
     <h2>
       <a href="/post/{{posts.id}}">{{posts.title}}</a>
@@ -7,14 +7,14 @@
     <p>
         {{posts.body}}
     </p>
-    <p>Created by {{posts.user.name}} on {{format_date posts.created_at}}</p>
+    <p>Created by {{posts.user.name}} on {{format_date posts.created_at}} Updated on {{format_date posts.updated_at}}</p>
   </div>
 </div>
 {{/each}}
 
 
 <form id="new-post-btn">
-<button class="btn btn-primary"  type="submit">+ New Post</button>
+    <button class="btn btn-primary"  type="submit">+ New Post</button>
 </form>
 
 <script src="/js/dashboard.js"></script>

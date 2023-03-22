@@ -1,0 +1,27 @@
+<div class="message-box">
+    <dir class="row message-title">
+        <h5 >{{data.[1].[0].title}}</h5>
+        <h5 > Post by{{data.[1].[0].user.name}}</h5>
+    </dir>
+    <p class="message-body">{{data.[1].[0].body}} </p>
+</div>
+
+
+{{#each data.[0] }}
+<div class="col mb-4 message-box">
+    <div class="message-title comment-message-title">
+        <h6>Comment By {{this.user.name}} on {{format_date this.created_at}}</h6>
+    </div>
+    <p class="message-body">{{this.body}}</p>
+</div>
+{{/each}}
+
+<div>
+    <textarea name="" id="new-comment-content" cols="100%" rows="5" placeholder="comment"></textarea>
+</div>
+
+<form id="new-comment-btn">
+    <button class="btn btn-primary"  type="submit">+ Comment</button>
+</form>
+
+<script src="/js/comment.js"></script>

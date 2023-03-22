@@ -8,6 +8,7 @@ router.post('/', withAuth, async (req, res) => {
             title: req.body.title,
             body: req.body.body,
             userid: req.session.user_id,
+            created_at: req.body.dateNow,
             updated_at: req.body.dateNow
         });
         res.status(200).json(post);
@@ -21,7 +22,8 @@ router.put('/:id', withAuth, async (req,res) => {
         await Post.update(
             {
                 title: req.body.title,
-                body: req.body.content
+                body: req.body.content,
+                updated_at: req.body.dateNow
             },
             {
                 where: {

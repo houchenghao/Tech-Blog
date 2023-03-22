@@ -9,30 +9,26 @@
     <title>Tech Blog</title>
 </head>
 <body>
-      <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        {{#unless logged_in}}        
-        <a href="/login">login</a>
-        {{/unless}}
-        <a id = "logout" href="">Logout</a>
-      </nav>
+    <div class="flex-column justify-space-around">
+        <header class="flex-column p-5">
+            <nav>
+                <a class="nav-font" href="/">Home</a>
+                <a class="nav-font" href="/dashboard">Dashboard</a>
+                {{#unless logged_in}}        
+                <a class="nav-font" href="/login">login</a>
+                {{/unless}}
+                <a class="nav-font" id = "logout" href="">Logout</a>
+            </nav>
 
-    <h2>
-        <a href="/">Tech Blog</a>
-      </h2>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
+            <h2 class="hompage-title">
+                <a href="/">Tech Blog</a>
+            </h2>
+        </header>
+        <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        {{{ body }}}
+        </main>
+    </div>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

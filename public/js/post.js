@@ -4,24 +4,37 @@ const updateFormHandler = async (event) => {
     const content = document.querySelector('#post-content').value.trim();
     const pathname = document.location.pathname;
 
-    console.log("update")
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+    const currentDay = currentDate.getDate();
+    const currentHour = currentDate.getHours();
+    const currentMinute = currentDate.getMinutes();
+    const currentSecond = currentDate.getSeconds();
+    const dateNow = `${currentYear}-${currentMonth}-${currentDay} ${currentHour}:${currentMinute}:${currentSecond}`;
+
+   
     const response = await fetch(`/api${pathname}`, {
         method: "PUT",
-        body: JSON.stringify({ title, content }),
+        body: JSON.stringify({ title, content, dateNow }),
         headers: { "Content-Type": "application/json" },
     });
+    if(response.ok){
+        document.location.replace('/dashboard');
+    }
 
 };
 
 const deleteFormHandler = async (event) => {
     event.preventDefault();
-    console.log("delete");
+    
     const pathname = document.location.pathname;
     const response = await fetch(`/api${pathname}`, {
         method: "DELETE",
-        // body: JSON.stringify({ title, content }),
-        // headers: { "Content-Type": "application/json" },
-      });
+    });
+    if(response.ok){
+        document.location.replace('/dashboard');
+    }
 }
 
 
