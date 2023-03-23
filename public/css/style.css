@@ -2,6 +2,7 @@
     border: 1px solid #424040;
     border-radius: 5px;
     padding: 10px;
+    width: 80%;
  }
   
 .message-title {
@@ -27,11 +28,35 @@
 }
 
 .nav-font{
+    background-color: #706e6e;
     font-size:x-large;
     font-weight: bold;
-    color: #706e6e;
+    color: #fff;
 }
 
 .hompage-title {
-    color: #706e6e;
+    color: #ece2e2;
+    text-shadow: 2px 2px 4px rgb(243, 198, 113);
+    font-style: italic;
+}
+
+.header-nav-bar{
+    background-color: #706e6e;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-decoration:wavy
+}
+
+.page-blackground{
+    background-color: #e7e2e2;
+}
+
+.login-username{
+    font-style: italic;
+}
+
+.dashboard-message-title{
+    color: #fff;
 }

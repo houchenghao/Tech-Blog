@@ -13,8 +13,9 @@ Comment.init(
     },
 
     body: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
+      len: [1, 2000]
     },
 
     created_at: {

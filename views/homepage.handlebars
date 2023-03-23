@@ -1,14 +1,15 @@
 <!-- Loop over each object in the projects array -->
 {{#each posts as |posts| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <a href="/comment/{{posts.id}}">{{posts.title}}</a>
-    </h2>
-    <p>
-        {{posts.body}}
-    </p>
-    <p>Created by {{posts.user.name}} on {{format_date posts.created_at}}</p>
+<div class="col mb-4 message-box">
+  <div class="message-title">
+    <h5>
+      <a class="dashboard-message-title" href="/comment/{{posts.id}}">{{posts.title}}</a>
+    </h5>
+    <h5 >
+      Created by {{posts.user.name}} on {{format_date posts.created_at}}
+    </h5>
   </div>
+
+  <p class="message-body">{{posts.body}}</p>
 </div>
 {{/each}}

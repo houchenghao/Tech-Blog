@@ -8,26 +8,45 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Tech Blog</title>
 </head>
-<body>
+<body class="page-blackground">
     <div class="flex-column justify-space-around">
-        <header class="flex-column p-5">
-            <nav>
-                <a class="nav-font" href="/">Home</a>
-                <a class="nav-font" href="/dashboard">Dashboard</a>
-                {{#unless logged_in}}        
-                <a class="nav-font" href="/login">login</a>
-                {{/unless}}
-                <a class="nav-font" id = "logout" href="">Logout</a>
+        <header class="flex-column p-5 pb-3 header-nav-bar">
+            <nav class="display-flex justify-space-between">
+                <div>
+                    <a class="nav-font p-3" href="/">Home</a>
+                    <a class="nav-font p-3" href="/dashboard">Dashboard</a>
+                    {{#unless logged_in}}        
+                    <a class="nav-font p-3" href="/login">login</a>
+                    {{/unless}}
+                    <a class="nav-font p-3" id = "logout" href="">Logout</a>
+                </div>
+
+                <div>
+                    {{#if login_userName}}
+                    <p class ="nav-font p-3 login-username" >Hello,{{login_userName}}</p>
+                    {{/if}}
+                </div>
+
             </nav>
 
-            <h2 class="hompage-title">
-                <a href="/">Tech Blog</a>
+            {{#if dashboard}}
+            <h2 class="hompage-title p-3 pb-1">
+                YOUR DASHBOARD
             </h2>
+            {{/if}}
+
+            {{#if homepage}}
+            <h2 class="hompage-title p-3 pb-1">
+                HOMEPAGE
+            </h2>
+            {{/if}}
         </header>
+
         <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{ body }}}
         </main>
+
     </div>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

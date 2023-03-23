@@ -1,11 +1,10 @@
 [
-    { 
-      "name": "Chenghao",
-      "password": "123456789"
-    },
-    { 
-      "name": "opopiio",
-      "password": "123456789"
-    }
-  ]
-  
+  { 
+    "name": "Chenghao",
+    "password": "123456789"
+  },
+  { 
+    "name": "opopiio",
+    "password": "123456789"
+  }
+]

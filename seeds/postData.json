@@ -1,16 +1,16 @@
 [
-    { 
-      "title": "Title 1",
-      "body": "The first post",
-      "created_at": "2022-06-22 10:30:00",
-      "updated_at": "2022-06-22 10:30:00",
-      "userid": 1
-    },
-    { 
-      "title": "Title 2",
-      "body": "The second post",
-      "created_at": "2022-06-22 10:30:00",
-      "updated_at": "2022-06-22 10:30:00",
-      "userid": 2
-    }
-  ]
+  { 
+    "title": "Why MVC is so important",
+    "body": "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer ofr design, and the Controller layer for applicaiton logic",
+    "created_at": "2022-06-22 10:30:00",
+    "updated_at": "2022-06-22 10:30:00",
+    "userid": 1
+  },
+  { 
+    "title": "Authentication vs Authorization",
+    "body": "There is a difference between authentication and authorization. Authentication means confirming your own identity, Whereas authorization means being allowed access to the system.",
+    "created_at": "2022-06-22 10:30:00",
+    "updated_at": "2022-06-22 10:30:00",
+    "userid": 1
+  }
+]
